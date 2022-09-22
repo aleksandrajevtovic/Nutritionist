@@ -1,0 +1,152 @@
+@import "./variables";
+.club-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  // padding-right: 15px;
+  // padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  padding-right: 0;
+  /*     width:100%; */
+}
+.cont-wrapper {
+  background: #fdedf1;
+  display: flex;
+  border-radius: $radius-lg;
+  padding: 2.5rem;
+}
+.cont-left {
+  max-width: 40%;
+  width: 40%;
+}
+.img-wrapper {
+  img {
+    border-radius: $radius-md;
+  }
+}
+.cont-right {
+  padding: 40px;
+  display: grid;
+  place-content: center;
+  max-width: 60%;
+  width: 60%;
+  form {
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 48px;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+    margin: 0 0 1.5rem;
+    text-align: left;
+    span {
+      font-family: $cursive-font;
+      color: $pink;
+      transform: rotate(344deg);
+      display: inline-block;
+      font-size: 48px;
+      margin: 0 1.5rem;
+    }
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.custom-input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: $radius-sm;
+  border: none;
+  border: 1px solid $light;
+  box-shadow: 1px 1px 6px 4px hsla(342, 0.77, 0.95,0.05);
+  &:focus {
+    // background:$light-pink;
+    border: 1px solid $pink;
+    outline: none;
+  }
+}
+  
+
+
+@media only screen and (max-width: 991px) {
+  .cont-wrapper {
+    flex-direction: column;
+    border: none;
+    padding: 1.5rem;
+  }
+  .cont-left {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .cont-right {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    .padd {
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 40px;
+      span {
+        font-size: 40px;
+        transform: rotate(0deg);
+        margin: 0 1rem;
+    display: block;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .club-section {
+    margin-bottom: 0;
+  }
+  .cont-wrapper {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.5rem 1.5rem 2.875rem;
+  }
+  .cont-right {
+    h2 {
+      font-size: 36px;
+      span {
+        font-size: 36px;
+      }
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .cont-right {
+    .padd {
+      padding: 2rem 1rem 0rem 1rem;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 1rem;
+      span {
+        font-size: 28px;
+        display: contents;
+      }
+    }
+  }
+}

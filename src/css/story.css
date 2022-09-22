@@ -1,0 +1,135 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.mt-8r {
+  margin-top: 8rem;
+}
+
+.box {
+  background-color: #fbdfe6;
+}
+
+.box1 {
+  grid-column: span 6;
+  padding: 3rem 3rem 1rem 6rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.box1 h2 {
+  font-size: calc(1.5rem + 0.9vw);
+  line-height: 42px;
+  margin: 0 0 32px;
+  margin-bottom: 2rem;
+  font-family: "Abril Fatface", cursive;
+  color: #2a2a2a;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.box1 p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.img-resp {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.mb-2r {
+  margin-bottom: 2rem;
+}
+
+.secondary-btn {
+  background: transparent;
+  border-radius: 60px;
+  outline: none;
+  border: 1px solid #ea4b76;
+  padding: 1rem 2rem;
+  color: #ea4b76;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #ea4b76;
+  border: 1px solid #ea4b76;
+  color: #fff;
+}
+
+.box2 {
+  grid-column: span 4;
+  background: #fbdfe6;
+}
+
+.box2 img {
+  border-radius: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  height: 600px;
+  margin-left: 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .box2 img {
+    margin-left: 5rem;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .box1 {
+    padding: 3rem;
+  }
+  .box2 img {
+    margin-left: 4rem;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid {
+    display: block;
+  }
+  .box.mt-8r {
+    margin-top: 0;
+  }
+  .box2 {
+    padding: 1rem 3rem 3rem;
+  }
+  .box2 img {
+    margin-left: 0;
+    height: auto;
+    max-width: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .box1 {
+    padding: 3rem 1.5rem 3rem;
+  }
+  .box1 h2 {
+    margin-bottom: 1rem;
+  }
+  .box2 {
+    padding: 0rem 1.5rem 5rem;
+  }
+}

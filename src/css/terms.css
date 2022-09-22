@@ -1,0 +1,111 @@
+.narrow {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 3rem auto 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  color: #2a2a2a;
+}
+
+@media (max-width: 767px) {
+  .narrow {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin: 1rem auto 3rem;
+  }
+}
+
+.narrow .main-title {
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 3rem;
+  font-size: calc(1.5rem + 0.9vw);
+}
+
+@media (max-width: 767px) {
+  .narrow .main-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.narrow ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.narrow ul li {
+  list-style-type: disc;
+}
+
+.narrow ul li a {
+  color: #ea4b76;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea4b76), to(#ea4b76));
+  background-image: linear-gradient(#ea4b76, #ea4b76);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100% 1px;
+  -webkit-transition: background-size 0.5s, background-position 0.3s ease-in 0.5s;
+  transition: background-size 0.5s, background-position 0.3s ease-in 0.5s;
+}
+
+.narrow ul li a:hover {
+  background-size: 100% 100%;
+  background-position: 0% 0%;
+  -webkit-transition: background-position 0.5s, background-size 0.3s ease-in 0.5s;
+  transition: background-position 0.5s, background-size 0.3s ease-in 0.5s;
+  color: #fff;
+}
+
+.narrow__body h2 {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 0;
+}
+
+.narrow__body p {
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.narrow__body p:last-child {
+  margin-bottom: 0;
+}
+
+.narrow__body p a {
+  color: #ea4b76;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ea4b76), to(#ea4b76));
+  background-image: linear-gradient(#ea4b76, #ea4b76);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100% 1px;
+  -webkit-transition: background-size 0.5s, background-position 0.3s ease-in 0.5s;
+  transition: background-size 0.5s, background-position 0.3s ease-in 0.5s;
+}
+
+.narrow__body p a:hover {
+  background-size: 100% 100%;
+  background-position: 0% 0%;
+  -webkit-transition: background-position 0.5s, background-size 0.3s ease-in 0.5s;
+  transition: background-position 0.5s, background-size 0.3s ease-in 0.5s;
+  color: #fff;
+}
+
+.narrow.h-60vh {
+  height: 60vh;
+}

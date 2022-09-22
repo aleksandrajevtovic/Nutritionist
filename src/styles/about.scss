@@ -1,0 +1,233 @@
+@import "./variables";
+
+.center-text {
+  text-align: center;
+}
+
+.flex-section {
+  display: flex;
+  max-width: 1200px;
+  height: auto;
+  // padding: 1rem;
+  // padding: 4rem 0;
+  padding: 4rem 0 1rem;
+  margin: auto;
+  line-height: 1.6;
+
+  img {
+    //   object-fit: cover;
+    width: 100%;
+    //   height: 500px;
+  }
+}
+
+.column-left {
+  flex-basis: 60%;
+  border-radius: $radius-md;
+  // margin: 1rem -10rem 1rem 1rem;
+  margin: 1rem -5rem 1rem 9rem;
+  color: $dark;
+  padding: 3rem;
+  // background-color: #ffffffe6;
+  // background-color: $light-pink;
+  background-color: #fef6f8;
+  z-index: 1;
+  text-align: left;
+  h1 {
+    font-family: $secondary-font;
+    margin-bottom: 1rem;
+    // font-size: 36px;
+    font-size: clamp(1.8rem, 2.25vw, 2.25rem);
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.column-right {
+  // flex-basis: 70%;
+  flex-basis: 60%;
+  margin: 1rem;
+  img {
+  border-radius: $radius-md;
+}
+}
+
+.text-image {
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .flex-section {
+    flex-direction: column;
+  }
+
+  .column-left {
+    flex-basis: 50%;
+    //   margin: 1rem;
+    margin: -9rem 1rem 0 1rem;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .column-right {
+    display: none;
+    flex-basis: 50%;
+    // margin: 1rem;
+    margin: 0;
+    
+    order: -1;
+  }
+ 
+}
+
+@media screen and (max-width: 575px) {
+  .column-left {
+    // padding: 2rem 1.5rem 2rem;
+    padding:1.5rem 1.2rem 2rem
+  }
+}
+
+// about grid story
+.about-grid-story {
+  margin-top: 3rem;
+}
+@media (min-width: 960px) {
+  .text-media {
+    display: flex;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .text-media__img-wrapper {
+    height: 100%;
+  }
+
+  .text-media__content {
+    padding: 0 4rem 4rem 4rem;
+  }
+
+  .text-media:nth-child(even) .text-media__content {
+    margin-left: auto;
+  }
+}
+
+.text-media--no-bg {
+  background-color: transparent;
+}
+
+.text-media__col {
+  position: relative;
+  flex: 0 0 50%;
+  &.text-media__col--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grey;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.text-media__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+}
+
+.text-media__col {
+  position: relative;
+  flex: 0 0 50%;
+}
+
+.text-media__content {
+  max-width: 45rem;
+  // padding: 1rem;
+  padding: 3rem;
+  h2 {
+    justify-content: flex-start;
+    // font-size: 36px;
+    font-size: clamp(1.8rem, 2.25vw, 2.25rem);
+    margin: 0 0 1.5rem;
+    text-align: left;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+// about hero section ***********
+.about-hero {
+  position: relative;
+  // display: flex;
+  flex-direction: row;
+  width: 100%;
+  .about-hero-cont {
+    display: flex;
+    flex-flow: row nowrap;
+    /*horizontal alignment*/
+    text-align: center;
+    justify-content: center;
+    /*vertical alignment*/
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.image-hero {
+  width: 100%;
+  max-height: inherit;
+  overflow: hidden;
+}
+/*absolute works because there is no other positioning applied to the text. As long as it stays that way the text is still responding to the flexbox properties even if its technically removed from the flexbox */
+.hero-description {
+  position: absolute;
+  .description {
+    font-family: $secondary-font;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.3;
+    text-align: center;
+    color: #ffffff;
+    &.italic {
+      font-family: $cursive-font;
+      // font-size: 48px;
+      line-height: 90px;
+      /* identical to box height, or 188% */
+
+      text-align: center;
+
+      color: #ffffff;
+    }
+  }
+}
+
+//   h2 {
+//     font-size: 2rem;
+//     font-weight: 800;
+//   }
+
+//   @media (min-width: 720px) {
+//     h2 {
+//       font-size: 3rem;
+//     }
+//   }
+@media (max-width: 767px) {
+  .about-hero {
+    .about-hero-cont {
+      height: 70vh;
+    }
+  }
+  .image-hero {
+    height: 70vh;
+    object-fit: cover;
+  }
+  .text-media__content {
+    padding: 1.5rem;
+}
+}

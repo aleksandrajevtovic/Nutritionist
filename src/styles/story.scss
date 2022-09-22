@@ -1,0 +1,128 @@
+@import "./variables";
+
+.grid {
+  display: grid;
+  // grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  // grid-gap: 10px;
+}
+.mt-8r {
+  margin-top: 8rem;
+}
+.box {
+  // grid-column: span 12;
+  // padding: 10px;
+  background-color: $light-pink;
+}
+.box1 {
+  grid-column: span 6;
+  // padding: 3rem 0 3rem 3rem;
+  // padding: 3rem;
+  // padding: 3rem 3rem 1rem;
+  padding: 3rem 3rem 1rem 6rem;
+  display: grid;
+  place-content: center;
+  h2 {
+    font-size: calc(1.5rem + 0.9vw);
+    line-height: 42px;
+    margin: 0 0 32px;
+    margin-bottom: 2rem;
+    font-family: $secondary-font;
+    color: $dark;
+    justify-content: flex-start;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+.img-resp {
+  max-width: 100%;
+  height: auto;
+}
+.w-70 {
+  width: 70%;
+}
+.mb-2r {
+  margin-bottom: 2rem;
+}
+.secondary-btn {
+  // margin-top:1.5rem;
+  background: transparent;
+  border-radius: $radius-lg;
+  outline: none;
+  border: 1px solid $pink;
+  padding: 1rem 2rem;
+  color: $pink;
+  text-transform: uppercase;
+  transition: 0.3s all;
+  cursor: pointer;
+  &:hover {
+    background: $pink;
+    border: 1px solid $pink;
+    color: $light;
+  }
+}
+.box2 {
+  grid-column: span 4;
+  // background: blue;
+  background: $light-pink;
+  img {
+    border-radius: $radius-lg;
+    object-fit: cover;
+    transform: scale(1.15);
+    height: 600px;
+    margin-left: 6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .box2 {
+    img {
+      margin-left: 5rem;
+      height: 500px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .box1 {
+    padding: 3rem;
+  }
+  .box2 {
+    img {
+      margin-left: 4rem;
+      height: 420px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .grid {
+    display: block;
+  }
+  .box {
+    &.mt-8r {
+      margin-top: 0;
+    }
+  }
+  .box2 {
+    padding: 1rem 3rem 3rem;
+    img {
+      margin-left: 0;
+      height: auto;
+      max-width: 100%;
+      transform: scale(1);
+      border-radius: $radius-md;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .box1 {
+    padding: 3rem 1.5rem 3rem;;
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  .box2 {
+    padding: 0rem 1.5rem 5rem;
+  }
+}

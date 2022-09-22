@@ -1,0 +1,138 @@
+.shop-section {
+  margin-top: 3rem;
+}
+
+.shop-section h2 {
+  margin-bottom: 2rem;
+}
+
+.dis {
+  color: red;
+}
+
+.shop-grid {
+  padding-block: 2rem;
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-inline: auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+      grid-template-areas: "one" "two" "three";
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.shop-card-img {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.shop-card-img img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  -webkit-transition: 0.25s 0.1s ease-out;
+  transition: 0.25s 0.1s ease-out;
+}
+
+.shop-card-img img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.shop-card:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+  margin-bottom: 2rem;
+}
+
+.shop-card:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: two;
+}
+
+.shop-card:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: three;
+}
+
+@media (min-width: 575px) {
+  .shop-grid {
+        grid-template-areas: "one two" "three three";
+  }
+}
+
+@media (min-width: 767px) {
+  .shop-grid {
+        grid-template-areas: "one two three";
+  }
+}
+
+.btn-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-card-body {
+  padding: 1.5rem 1rem;
+}
+
+.shop-card-body a .title {
+  color: #2a2a2a;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.shop-card-body .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop-card-body .price {
+  color: #ea4b76;
+  margin: 1rem 1rem 1.5rem 0;
+  font-size: 20px;
+}
+
+.delPrice {
+  text-decoration: line-through;
+  opacity: .8;
+  color: #808080 !important;
+}
+
+.diet-plans-section h2 {
+  margin-bottom: 2rem;
+}
+
+.diet-plans-section {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .diet-plans-section {
+    margin-top: 1.5rem;
+  }
+}

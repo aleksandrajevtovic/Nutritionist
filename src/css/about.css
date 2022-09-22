@@ -1,0 +1,246 @@
+.center-text {
+  text-align: center;
+}
+
+.flex-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  height: auto;
+  padding: 4rem 0 1rem;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.flex-section img {
+  width: 100%;
+}
+
+.column-left {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  border-radius: 30px;
+  margin: 1rem -5rem 1rem 9rem;
+  color: #2a2a2a;
+  padding: 3rem;
+  background-color: #fef6f8;
+  z-index: 1;
+  text-align: left;
+}
+
+.column-left h1 {
+  font-family: "Abril Fatface", cursive;
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 2.25vw, 2.25rem);
+}
+
+.column-left p {
+  font-size: 18px;
+}
+
+.column-right {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin: 1rem;
+}
+
+.column-right img {
+  border-radius: 30px;
+}
+
+.text-image {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .flex-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .column-left {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: -9rem 1rem 0 1rem;
+    padding: 3rem;
+    text-align: center;
+  }
+  .column-right {
+    display: none;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 0;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .column-left {
+    padding: 1.5rem 1.2rem 2rem;
+  }
+}
+
+.about-grid-story {
+  margin-top: 3rem;
+}
+
+@media (min-width: 960px) {
+  .text-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .text-media:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .text-media__img-wrapper {
+    height: 100%;
+  }
+  .text-media__content {
+    padding: 0 4rem 4rem 4rem;
+  }
+  .text-media:nth-child(even) .text-media__content {
+    margin-left: auto;
+  }
+}
+
+.text-media--no-bg {
+  background-color: transparent;
+}
+
+.text-media__col {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.text-media__col.text-media__col--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F5F7F9;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.text-media__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
+}
+
+.text-media__col {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.text-media__content {
+  max-width: 45rem;
+  padding: 3rem;
+}
+
+.text-media__content h2 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: clamp(1.8rem, 2.25vw, 2.25rem);
+  margin: 0 0 1.5rem;
+  text-align: left;
+}
+
+.text-media__content p {
+  font-size: 18px;
+}
+
+.about-hero {
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.about-hero .about-hero-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  /*horizontal alignment*/
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*vertical alignment*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.image-hero {
+  width: 100%;
+  max-height: inherit;
+  overflow: hidden;
+}
+
+/*absolute works because there is no other positioning applied to the text. As long as it stays that way the text is still responding to the flexbox properties even if its technically removed from the flexbox */
+.hero-description {
+  position: absolute;
+}
+
+.hero-description .description {
+  font-family: "Abril Fatface", cursive;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.3;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-description .description.italic {
+  font-family: "Hurricane", cursive;
+  line-height: 90px;
+  /* identical to box height, or 188% */
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .about-hero .about-hero-cont {
+    height: 70vh;
+  }
+  .image-hero {
+    height: 70vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .text-media__content {
+    padding: 1.5rem;
+  }
+}

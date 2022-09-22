@@ -1,0 +1,132 @@
+.diet-plan-section {
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-inline: auto;
+}
+
+.diet-plan-section img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.diet-plan-section h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+}
+
+.diet-plan-section .price {
+  color: #ea4b76;
+  margin: 1rem 0 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+.diet-plan-section .summary {
+  margin-top: 1.5rem;
+}
+
+.diet-plan-section .summary p {
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.diet-plan-section .summary p:last-child {
+  margin-bottom: 2rem;
+}
+
+.diet-plan-section .diet-plan-details-wrapper {
+  margin: 2rem 0;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.diet-plan-details-wrapper p {
+  font-size: 1.1rem;
+}
+
+.diet-plan-details-wrapper h4 {
+  font-size: 1.2rem;
+}
+
+.diet-plan-details-wrapper .cooperation {
+  margin: 2rem 0;
+}
+
+.diet-plan-details-wrapper .cooperation ul {
+  margin: 1.5rem 0 2rem;
+  padding-left: 1rem;
+}
+
+.diet-plan-details-wrapper .cooperation ul li {
+  font-size: 1.1rem;
+  list-style-type: circle;
+  line-height: 1.25;
+  padding: 0.5rem 0;
+}
+
+.diet-plan-details-wrapper .cooperation ul li:last-child {
+  padding-bottom: 0;
+}
+
+.alt-hero-banner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2a2a2a;
+}
+
+.right-column {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: 3rem;
+  line-height: 1.5;
+}
+
+.left-column {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  color: #404040;
+}
+
+@media screen and (max-width: 767px) {
+  .flex-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .right-column {
+    margin: 1.5rem 0rem 0;
+  }
+}
+
+.cta-plan {
+  background-color: #fbdfe6;
+  border-radius: 60px;
+  margin-bottom: 4rem;
+  padding: 4rem 0.8rem;
+}
+
+.cta-plan h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: clamp(1.8rem, 3.2vw, 4rem);
+}
+
+.cta-plan .btn-wrap {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}

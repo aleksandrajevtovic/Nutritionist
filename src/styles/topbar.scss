@@ -1,0 +1,54 @@
+@import "./variables";
+.topbar-section {
+  background-color: $light-grey;
+  font-size: 0.86rem;
+  color: #606060;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  &__info {
+    display: flex;
+    align-items: center;
+    a {
+      margin-right: 1.5rem;
+      color: #606060;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 0.4rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__social-icons {
+    display: flex;
+    li {
+      margin-right: 1.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      svg {
+        fill: #606060;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .topbar-section {
+    text-align: center;
+    justify-content: center;
+    &__social-icons {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.club-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  padding-right: 0;
+  /*     width:100%; */
+}
+
+.cont-wrapper {
+  background: #fdedf1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 60px;
+  padding: 2.5rem;
+}
+
+.cont-left {
+  max-width: 40%;
+  width: 40%;
+}
+
+.img-wrapper img {
+  border-radius: 30px;
+}
+
+.cont-right {
+  padding: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  max-width: 60%;
+  width: 60%;
+}
+
+.cont-right form {
+  margin-bottom: 1.5rem;
+}
+
+.cont-right h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 48px;
+  margin-bottom: 2.5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 0 1.5rem;
+  text-align: left;
+}
+
+.cont-right h2 span {
+  font-family: "Hurricane", cursive;
+  color: #ea4b76;
+  -webkit-transform: rotate(344deg);
+          transform: rotate(344deg);
+  display: inline-block;
+  font-size: 48px;
+  margin: 0 1.5rem;
+}
+
+.cont-right p {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cont-right p span {
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 1px 1px 6px 4px rgba(2, 2, 2, 0.05);
+          box-shadow: 1px 1px 6px 4px rgba(2, 2, 2, 0.05);
+}
+
+.custom-input:focus {
+  border: 1px solid #ea4b76;
+  outline: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .cont-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+    padding: 1.5rem;
+  }
+  .cont-left {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .cont-right {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .cont-right .padd {
+    padding: 1rem;
+  }
+  .cont-right h2 {
+    font-size: 40px;
+  }
+  .cont-right h2 span {
+    font-size: 40px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    margin: 0 1rem;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .club-section {
+    margin-bottom: 0;
+  }
+  .cont-wrapper {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.5rem 1.5rem 2.875rem;
+  }
+  .cont-right h2 {
+    font-size: 36px;
+  }
+  .cont-right h2 span {
+    font-size: 36px;
+  }
+  .cont-right p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .cont-right .padd {
+    padding: 2rem 1rem 0rem 1rem;
+  }
+  .cont-right h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+  }
+  .cont-right h2 span {
+    font-size: 28px;
+    display: contents;
+  }
+}

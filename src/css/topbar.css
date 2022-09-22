@@ -1,0 +1,81 @@
+.topbar-section {
+  background-color: #F5F7F9;
+  font-size: 0.86rem;
+  color: #606060;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.topbar-section__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar-section__info a {
+  margin-right: 1.5rem;
+  color: #606060;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.topbar-section__info a svg {
+  margin-right: 0.4rem;
+}
+
+.topbar-section__info a:last-child {
+  margin-right: 0;
+}
+
+.topbar-section__info a:hover {
+  opacity: 0.8;
+}
+
+.topbar-section__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topbar-section__social-icons li {
+  margin-right: 1.5rem;
+}
+
+.topbar-section__social-icons li:last-child {
+  margin-right: 0;
+}
+
+.topbar-section__social-icons li svg {
+  fill: #606060;
+}
+
+.topbar-section__social-icons li svg:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 460px) {
+  .topbar-section {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .topbar-section__social-icons {
+    display: none;
+  }
+}
