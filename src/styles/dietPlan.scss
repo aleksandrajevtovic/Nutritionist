@@ -12,17 +12,16 @@
   }
   h1 {
     font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-
+    font-weight: 600;
   }
   .price {
     color: $pink;
     margin: 1rem 0 1.5rem;
     // font-size: 1.7rem;
     font-size: clamp(1.5rem, 2vw, 1.8rem);
-
   }
   .summary {
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
     p {
       font-size: 1.15rem;
       line-height: 1.25;
@@ -73,6 +72,13 @@
   flex-basis: 50%;
   margin: 3rem;
   line-height: 1.5;
+  .prices {
+    display: flex;
+    gap: 1rem;
+    del {
+      color: #808080;
+    }
+  }
 }
 .left-column {
   flex-basis: 50%;
@@ -95,7 +101,6 @@ p {
   .right-column {
     margin: 1.5rem 0rem 0;
   }
-  
 }
 
 .cta-plan {

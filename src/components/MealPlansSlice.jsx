@@ -26,11 +26,19 @@ const MealPlansSlice = () => {
               <Link to={`/shop/diet-plan/${dietPlan.id}`}>
                 <h4 className="title">{dietPlan.name}</h4>
               </Link>
-              <div className="prices">
+              {/* <div className="prices">
                 <h4 className="price ">
                 € {dietPlan.price ? dietPlan.price : ""}{" "}
                 </h4>
                 <h4 className="price">€ {dietPlan.salePrice} </h4>
+              </div> */}
+                <div className="prices">
+                <del className="price">{dietPlan.salePrice}</del>
+                <h4 className="price">€ {dietPlan.price}</h4>
+                {/* <h4 className="price ">
+                € {dietPlan.price ? dietPlan.price : ""}{" "}
+                </h4> */}
+                {/* <h4 className="price">€ {dietPlan.salePrice} </h4> */}
               </div>
               <button
                 onClick={() => {

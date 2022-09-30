@@ -3,7 +3,7 @@ import Home from "./Home";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import About from "./About";
 import Shop from "./Shop";
-import DietPlan from "./DietPlan";
+// import DietPlan from "./DietPlan";
 import Recipe from "./Recipe";
 import Recipes from "./Recipes";
 import Contact from "./Contact";
@@ -12,11 +12,12 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import RefundPolicy from "./RefundPolicy";
 import ErrorPage from "./ErrorPage";
 // import Products from "./Products";
-import SingleProduct from "./SingleProduct";
+// import SingleProduct from "./SingleProduct";
 import Cart from "./Cart";
 import { useState } from "react";
 import { useEffect } from "react";
 import Searched from "./Searched";
+import DietPlan from "./DietPlan";
 
 const Pages = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -111,7 +112,7 @@ const Pages = () => {
         />
 
         {/* <Route path="/products/" element={<Products />} /> */}
-        <Route path="/products/:dietPlanId" element={<SingleProduct />} />
+        {/* <Route path="/products/:dietPlanId" element={<SingleProduct />} /> */}
         <Route path="/searched/:search" element={<Searched cartItems={cartItems} />} />
       </Routes>
     </BrowserRouter>

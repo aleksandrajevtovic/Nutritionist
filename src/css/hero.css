@@ -214,6 +214,7 @@ a {
   .creative-hero__image img {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    height: 90vh;
   }
 }
 
@@ -251,6 +252,12 @@ a {
   height: 90vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .creative-hero__image img {
+    height: 75vh;
+  }
 }
 
 .creative-hero__title {

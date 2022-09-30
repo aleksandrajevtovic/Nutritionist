@@ -128,6 +128,11 @@ h1 {
   &.dark {
     color: $dark;
     border-bottom: 1px solid $dark;
+    transition: 0.25s 0.1s ease-out;
+    &:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
   }
 }
 a {

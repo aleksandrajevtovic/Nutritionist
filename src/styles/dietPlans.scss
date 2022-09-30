@@ -76,15 +76,24 @@ picture {
 
 .shop-card-body {
   padding: 1.5rem 1rem;
+  display: flex;
+    /* place-content: center; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
   a {
     .title {
       color: $dark;
-      font-size: 20px;
+      font-size: 23px;
       text-transform: uppercase;
+      text-align: center;
     }
   }
   .prices {
     display: flex;
+  }
+  del.price {
+    color: #808080;
   }
   .price {
     

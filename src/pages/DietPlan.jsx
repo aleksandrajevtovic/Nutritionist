@@ -83,8 +83,16 @@ const DietPlan = (props) => {
           </div>
           <div className="right-column">
             <h1>{name}</h1>
-            <h3 className="price">€ {price}</h3>
-            {/* <h3 className="price">{salePrice}</h3> */}
+            {/* <h3 className="price">€ {price}</h3>
+            <h3 className="price">{salePrice}</h3> */}
+              <div className="prices">
+            <del className="price">{dietPlan.salePrice}</del>
+              <h4 className="price">€ {dietPlan.price}</h4>
+                {/* <h4 className="price ">
+                € {dietPlan.price ? dietPlan.price : ""}{" "}
+                </h4> */}
+                {/* <h4 className="price">€ {dietPlan.salePrice} </h4> */}
+              </div>
             <div className="summary">
               <p>{frontDesc1}</p>
               <p>{frontDesc2}</p>

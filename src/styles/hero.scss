@@ -205,6 +205,7 @@ a {
     img {
       border-top-left-radius: $radius-md;
       border-bottom-left-radius: $radius-md;
+      height: 90vh;
     }
   }
 }
@@ -244,6 +245,13 @@ a {
     height: 90vh;
     object-fit: cover;
   }
+}
+@media(max-width:576px) {
+.creative-hero__image {
+  img {
+    height: 75vh;
+  }
+}
 }
 .creative-hero__title {
   font-size: clamp(3rem, 6vw, 8rem);

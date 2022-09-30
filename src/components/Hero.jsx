@@ -8,7 +8,6 @@ const Hero = () => {
       <section className="creative-hero">
         <div className="creative-hero__container">
           <div className="creative-hero__main">
-            <h4 className="creative-hero__sign">Mylah Bloom</h4>
           
             <h1 className="creative-hero__title">
               Place where nutrition and mindfulness meet

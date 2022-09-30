@@ -3,7 +3,7 @@ const dietPlans = [
     id: "individual-diet-plan",
     name: "Individual diet plan",
     price: "180",
-    salePrice: "129",
+    salePrice: "€ 129",
     imgUrl: "/assets/images/individual-diet-plan.jpg",
     frontDesc1:
       "With this individual diet plan you can easily and efficiently achieve the desired results.",
@@ -60,7 +60,7 @@ const dietPlans = [
     id: "winter-menu-2021",
     name: "Winter 2021 Menu",
     price: "20",
-    salePrice: "15",
+    salePrice: "€ 15",
     imgUrl: "/assets/images/winter-menu-2021.jpg",
     frontDesc1:
       "Designed so that local and seasonal foods are represented in the recipes",

@@ -14,16 +14,13 @@
 
 .diet-plan-section h1 {
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-weight: 600;
 }
 
 .diet-plan-section .price {
   color: #ea4b76;
   margin: 1rem 0 1.5rem;
   font-size: clamp(1.5rem, 2vw, 1.8rem);
-}
-
-.diet-plan-section .summary {
-  margin-top: 1.5rem;
 }
 
 .diet-plan-section .summary p {
@@ -84,6 +81,17 @@
       flex-basis: 50%;
   margin: 3rem;
   line-height: 1.5;
+}
+
+.right-column .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.right-column .prices del {
+  color: #808080;
 }
 
 .left-column {

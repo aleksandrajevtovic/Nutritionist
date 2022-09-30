@@ -151,6 +151,14 @@ h1 {
 .btn-underline.dark {
   color: #2a2a2a;
   border-bottom: 1px solid #2a2a2a;
+  -webkit-transition: 0.25s 0.1s ease-out;
+  transition: 0.25s 0.1s ease-out;
+}
+
+.btn-underline.dark:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  opacity: 0.9;
 }
 
 a {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Hero from "../components/Hero";
 import Popular from "../components/Popular";
 import Story from "../components/Story";
-import DietPlans from "../components/DietPlans";
+// import DietPlans from "../components/DietPlans";
 import Footer from "../components/Footer";
 import JoinTheClub from "../components/JoinTheClub";
 import Navbar from "../components/Navbar";
