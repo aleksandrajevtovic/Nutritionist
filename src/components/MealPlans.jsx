@@ -1,10 +1,15 @@
 import React from "react";
 import dietPlans from "../diet-plans";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const MealPlans = () => {
   let navigate = useNavigate();
   // let size=3;
+  const [isSale, setSale] = useState(false);
+  const sale = () => {
+    setSale(true);
+  };
   return (
     <div className="shop-grid">
       {dietPlans.map((dietPlan) => {
@@ -20,6 +25,13 @@ const MealPlans = () => {
                   className="img-resp"
                   alt={dietPlan.name}
                 />
+                {dietPlan.salePrice
+                  ? [
+                      <div class="badge-overlay">
+                        <span class="top-right badge-sale pink">Sale</span>
+                      </div>,
+                    ]
+                  : ""}
               </Link>
             </div>
             <div className="shop-card-body">
@@ -27,8 +39,16 @@ const MealPlans = () => {
                 <h4 className="title">{dietPlan.name}</h4>
               </Link>
               <div className="prices">
-                <del className="price">{dietPlan.salePrice}</del>
-                <h4 className="price">€ {dietPlan.price}</h4>
+                {/* <h4 className={'price' ? 'delPrice' : ""}> {dietPlan.salePrice} {dietPlan.price} </h4> && */}
+                {dietPlan.salePrice ? (
+                  [
+                    <h4 className="delPrice">€ {dietPlan.price}</h4>,
+                    <h4 className="price"> {dietPlan.salePrice}</h4>,
+                  ]
+                ) : (
+                  <h4 className="price">€ {dietPlan.price}</h4>
+                )}
+
                 {/* <h4 className="price ">
                 € {dietPlan.price ? dietPlan.price : ""}{" "}
                 </h4> */}

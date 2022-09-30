@@ -23,6 +23,13 @@
   font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 
+.diet-plan-section .delPrice {
+  text-decoration: line-through;
+  opacity: .8;
+  color: #808080;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
 .diet-plan-section .summary p {
   font-size: 1.15rem;
   line-height: 1.25;
@@ -87,16 +94,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-}
-
-.right-column .prices del {
-  color: #808080;
 }
 
 .left-column {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  position: relative;
 }
 
 h1 {

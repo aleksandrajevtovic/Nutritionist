@@ -68,16 +68,6 @@ const dietPlans = [
       "The recipes have already been created, and after filling out the questionnaire that we send you after payment, you will receive a menu of caloric values that corresponds to the goal you want to achieve.",
   },
   {
-    id: "spring-menu-2022",
-    name: "Spring 2022 Menu",
-    price: "20",
-    imgUrl: "/assets/images/spring-menu-2022.jpg",
-    frontDesc1:
-      "The recipes themselves are a mix of various cuisines of the world, adapted to easily available foods for everyone.",
-    frontDesc2:
-      "In this 2022 Spring Menu you get the following: 52 new recipes, bonus recipes, recipes are with calculated kcal and nutritional values, a mini guide to proper nutrition, access to a private Facebook group where we share recipes, experiences, tips, results.",
-  },
-  {
     id: "fall-menu-2022",
     name: "Fall 2022 Menu",
     price: "20",
@@ -89,6 +79,17 @@ const dietPlans = [
     frontDesc3:
       "In this menu, the emphasis is on the recipes themselves, of course, as always, there are caloric and nutritional values, so that you can have a rough idea of the values, but they are by no means there to be burdened with them and strictly adhere to them.",
   },
+  {
+    id: "spring-menu-2022",
+    name: "Spring 2022 Menu",
+    price: "20",
+    imgUrl: "/assets/images/spring-menu-2022.jpg",
+    frontDesc1:
+      "The recipes themselves are a mix of various cuisines of the world, adapted to easily available foods for everyone.",
+    frontDesc2:
+      "In this 2022 Spring Menu you get the following: 52 new recipes, bonus recipes, recipes are with calculated kcal and nutritional values, a mini guide to proper nutrition, access to a private Facebook group where we share recipes, experiences, tips, results.",
+  },
+  
   {
     id: "summer-menu-2022",
     name: "Summer 2022 Menu",

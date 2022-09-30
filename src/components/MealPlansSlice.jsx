@@ -20,6 +20,13 @@ const MealPlansSlice = () => {
                   className="img-resp"
                   alt={dietPlan.name}
                 />
+                {dietPlan.salePrice
+                  ? [
+                      <div class="badge-overlay">
+                        <span class="top-right badge-sale pink">Sale</span>
+                      </div>,
+                    ]
+                  : ""}
               </Link>
             </div>
             <div className="shop-card-body">
@@ -33,8 +40,16 @@ const MealPlansSlice = () => {
                 <h4 className="price">€ {dietPlan.salePrice} </h4>
               </div> */}
                 <div className="prices">
-                <del className="price">{dietPlan.salePrice}</del>
-                <h4 className="price">€ {dietPlan.price}</h4>
+                {dietPlan.salePrice ? (
+                  [
+                    <h4 className="delPrice">€ {dietPlan.price}</h4>,
+                    <h4 className="price"> {dietPlan.salePrice}</h4>,
+                  ]
+                ) : (
+                  <h4 className="price">€ {dietPlan.price}</h4>
+                )}
+                {/* <del className="price">{dietPlan.salePrice}</del>
+                <h4 className="price">€ {dietPlan.price}</h4> */}
                 {/* <h4 className="price ">
                 € {dietPlan.price ? dietPlan.price : ""}{" "}
                 </h4> */}

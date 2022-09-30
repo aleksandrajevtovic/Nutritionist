@@ -153,12 +153,14 @@
 }
 
 .cart__item-info__price-wrap__value {
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   line-height: 1.25rem;
-  padding: 0.375rem 0.625rem;
+  padding: 0.375rem 0rem;
   font-weight: 600;
-  border: 2px solid #ea4b76;
-  border-radius: 0.5rem;
+}
+
+.cart__item-info__price-wrap__value .delPrice {
+  margin: 0 0 0.5rem;
 }
 
 .cart__items-summary-wrapper {
@@ -290,6 +292,7 @@ hr {
   }
   .cart__item-info__price-wrap__value {
     display: inline;
+    padding: 0;
   }
 }
 
@@ -313,7 +316,7 @@ hr {
 .rmv-btn {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 3px;
 }
 
 .rmv-btn button {
@@ -323,6 +326,7 @@ hr {
   cursor: pointer;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  font-size: 0.9rem;
 }
 
 .rmv-btn button:hover {

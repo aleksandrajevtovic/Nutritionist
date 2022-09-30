@@ -80,19 +80,32 @@ const DietPlan = (props) => {
           <div className="left-column">
             {/* <img src="/assets/images/dietplan1.jpg" alt="diet plan" /> */}
             <img src={imgUrl} alt={name} />
+            {dietPlan.salePrice
+                  ? [
+                      <div class="badge-overlay">
+                        <span class="top-right badge-sale pink">Sale</span>
+                      </div>,
+                    ]
+                  : ""}
           </div>
           <div className="right-column">
             <h1>{name}</h1>
             {/* <h3 className="price">€ {price}</h3>
             <h3 className="price">{salePrice}</h3> */}
-              <div className="prices">
-            <del className="price">{dietPlan.salePrice}</del>
-              <h4 className="price">€ {dietPlan.price}</h4>
-                {/* <h4 className="price ">
+            <div className="prices">
+            {dietPlan.salePrice ? (
+                  [
+                    <h3 className="delPrice">€ {dietPlan.price}</h3>,
+                    <h3 className="price"> {dietPlan.salePrice}</h3>,
+                  ]
+                ) : (
+                  <h3 className="price">€ {dietPlan.price}</h3>
+                )}
+              {/* <h4 className="price ">
                 € {dietPlan.price ? dietPlan.price : ""}{" "}
                 </h4> */}
-                {/* <h4 className="price">€ {dietPlan.salePrice} </h4> */}
-              </div>
+              {/* <h4 className="price">€ {dietPlan.salePrice} </h4> */}
+            </div>
             <div className="summary">
               <p>{frontDesc1}</p>
               <p>{frontDesc2}</p>

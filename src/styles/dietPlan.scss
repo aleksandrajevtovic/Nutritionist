@@ -20,6 +20,12 @@
     // font-size: 1.7rem;
     font-size: clamp(1.5rem, 2vw, 1.8rem);
   }
+  .delPrice {
+    text-decoration: line-through;
+    opacity: .8;
+    color: #808080;
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+  }
   .summary {
     // margin-top: 1.5rem;
     p {
@@ -74,14 +80,11 @@
   line-height: 1.5;
   .prices {
     display: flex;
-    gap: 1rem;
-    del {
-      color: #808080;
-    }
   }
 }
 .left-column {
   flex-basis: 50%;
+  position: relative;
 }
 
 h1 {
@@ -118,3 +121,5 @@ p {
     place-content: center;
   }
 }
+
+
