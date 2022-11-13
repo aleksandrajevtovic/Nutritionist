@@ -2,11 +2,17 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
+import { motion as m } from "framer-motion";
 
 const TermsOfService = (props) => {
   const { cartItems } = props;
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       <section className="narrow">
@@ -363,17 +369,18 @@ const TermsOfService = (props) => {
             our website or the Service following the posting of any changes to
             these Terms of Service constitutes acceptance of those changes.
           </p>
-          <h2>SECTION 20 - CONTACT INFORMATION
-</h2>
+          <h2>SECTION 20 - CONTACT INFORMATION</h2>
           <p>
-          Questions about the Terms of Service should be sent to us at <a href="mailto:mylahfit@contact.com"><b> mylahfit@contact.com</b></a>.
-    
-
+            Questions about the Terms of Service should be sent to us at{" "}
+            <a href="mailto:mylahfit@contact.com">
+              <b> mylahfit@contact.com</b>
+            </a>
+            .
           </p>
         </div>
       </section>
       <Footer />
-    </div>
+    </m.div>
   );
 };
 

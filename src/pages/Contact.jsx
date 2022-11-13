@@ -3,12 +3,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
 import { Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 const Contact = (props) => {
   const { cartItems } = props;
 
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       <header className="hero-contact">
@@ -38,7 +44,8 @@ const Contact = (props) => {
               </div>
               <div className="hero-form-input">
                 <textarea
-                rows="6" cols="50"
+                  rows="6"
+                  cols="50"
                   className="hero-input hero-password-input"
                   type="text"
                   placeholder="Your Message *"
@@ -48,7 +55,7 @@ const Contact = (props) => {
               {/* <div class="hero-form-input">
                 <input class="hero-form-submit" type="submit" value="Sign Up" />
               </div> */}
-              <Link className="creative-hero__btn btn w-100p" to={'/shop'}>
+              <Link className="creative-hero__btn btn w-100p" to={"/shop"}>
                 <span className="btn__text">Send A Message</span>
                 <span className="btn__icon">
                   <svg
@@ -73,7 +80,7 @@ const Contact = (props) => {
       </header>
 
       <Footer />
-    </div>
+    </m.div>
   );
 };
 

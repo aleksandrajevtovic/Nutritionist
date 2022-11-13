@@ -18,6 +18,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Searched from "./Searched";
 import DietPlan from "./DietPlan";
+import { AnimatePresence } from "framer-motion";
 
 const Pages = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -66,9 +67,11 @@ const Pages = () => {
     );
   }, []);
 
+  // const location=useLocation();
   return (
     <BrowserRouter>
-      <Routes>
+    <AnimatePresence  mode={'wait'}>
+      <Routes location={window.location} key={window.location.pathname}>
         <Route path="/" element={<Home cartItems={cartItems} />} />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/about" element={<About cartItems={cartItems} />} />
@@ -115,6 +118,7 @@ const Pages = () => {
         {/* <Route path="/products/:dietPlanId" element={<SingleProduct />} /> */}
         <Route path="/searched/:search" element={<Searched cartItems={cartItems} />} />
       </Routes>
+      </AnimatePresence>
     </BrowserRouter>
   );
 };

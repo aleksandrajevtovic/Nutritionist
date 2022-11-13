@@ -7,6 +7,7 @@ import dietPlans from "../diet-plans";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import { useState } from "react";
+import { motion as m } from "framer-motion";
 
 const DietPlan = (props) => {
   const { dietPlanId } = useParams();
@@ -69,7 +70,12 @@ const DietPlan = (props) => {
   } = dietPlan;
 
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       {/* <button>{cartItems.length}</button> */}
@@ -81,26 +87,26 @@ const DietPlan = (props) => {
             {/* <img src="/assets/images/dietplan1.jpg" alt="diet plan" /> */}
             <img src={imgUrl} alt={name} />
             {dietPlan.salePrice
-                  ? [
-                      <div class="badge-overlay">
-                        <span class="top-right badge-sale pink">Sale</span>
-                      </div>,
-                    ]
-                  : ""}
+              ? [
+                  <div class="badge-overlay">
+                    <span class="top-right badge-sale pink">Sale</span>
+                  </div>,
+                ]
+              : ""}
           </div>
           <div className="right-column">
             <h1>{name}</h1>
             {/* <h3 className="price">€ {price}</h3>
             <h3 className="price">{salePrice}</h3> */}
             <div className="prices">
-            {dietPlan.salePrice ? (
-                  [
-                    <h3 className="delPrice">€ {dietPlan.price}</h3>,
-                    <h3 className="price"> {dietPlan.salePrice}</h3>,
-                  ]
-                ) : (
-                  <h3 className="price">€ {dietPlan.price}</h3>
-                )}
+              {dietPlan.salePrice ? (
+                [
+                  <h3 className="delPrice">€ {dietPlan.price}</h3>,
+                  <h3 className="price"> {dietPlan.salePrice}</h3>,
+                ]
+              ) : (
+                <h3 className="price">€ {dietPlan.price}</h3>
+              )}
               {/* <h4 className="price ">
                 € {dietPlan.price ? dietPlan.price : ""}{" "}
                 </h4> */}
@@ -206,7 +212,7 @@ const DietPlan = (props) => {
         </div>
       </section>
       <Footer />
-    </div>
+    </m.div>
   );
 };
 

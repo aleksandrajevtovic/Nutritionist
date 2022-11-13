@@ -2,11 +2,17 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
+import { motion as m } from "framer-motion";
 
 const RefundPolicy = (props) => {
   const { cartItems } = props;
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       <section className="narrow h-60vh">
@@ -23,7 +29,7 @@ const RefundPolicy = (props) => {
         </div>
       </section>
       <Footer />
-    </div>
+    </m.div>
   );
 };
 

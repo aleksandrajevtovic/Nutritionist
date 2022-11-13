@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 import MealPlans from "../components/MealPlans";
 import dietPlans from "../diet-plans";
 import MealPlansSlice from "../components/MealPlansSlice";
+
+import { motion as m } from "framer-motion";
+
 // import  '../css/navbar.css';
 
 const size = 3;
@@ -22,7 +25,12 @@ function Home(props) {
   // const [cartItems, setCartItems] = useState([]);
 
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       <Hero />
@@ -51,7 +59,7 @@ function Home(props) {
       </div>
       <JoinTheClub />
       <Footer />
-    </div>
+    </m.div>
   );
 }
 

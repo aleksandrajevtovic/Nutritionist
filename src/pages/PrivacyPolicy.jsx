@@ -2,11 +2,17 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
+import { motion as m } from "framer-motion";
 
 const PrivacyPolicy = (props) => {
   const { cartItems } = props;
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
       <section className="narrow">
@@ -172,7 +178,8 @@ const PrivacyPolicy = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              http://www.networkadvertising.org/ understanding-online-advertising/how-does-it-work
+              http://www.networkadvertising.org/
+              understanding-online-advertising/how-does-it-work
             </a>
             .
           </p>
@@ -298,7 +305,7 @@ const PrivacyPolicy = (props) => {
         </div>
       </section>
       <Footer />
-    </div>
+    </m.div>
   );
 };
 

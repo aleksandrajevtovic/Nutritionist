@@ -8,6 +8,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BsArrowUpRight } from "react-icons/bs";
+import { motion as m } from "framer-motion";
 
 const Cart = (props) => {
   const { cartItems, onAdd, onRemove, onRemoveItemFromCart } = props;
@@ -17,7 +18,10 @@ const Cart = (props) => {
   const totalPrice = itemsPrice;
 
   return (
-    <>
+    <m.div   initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.75, ease: "easeOut" }}>
       <Topbar />
       <Navbar countCartItems={cartItems.length} />
 
@@ -168,7 +172,7 @@ const Cart = (props) => {
       </section>
 
       <Footer />
-    </>
+    </m.div>
   );
 };
 
