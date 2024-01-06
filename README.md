@@ -1,3 +1,3 @@
 # Nutritionist
 
-https://mylahbloomfit.herokuapp.com/
+https://mylahbloomfit.netlify.app/
